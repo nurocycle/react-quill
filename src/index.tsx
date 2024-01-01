@@ -55,6 +55,7 @@ namespace ReactQuill {
       source: Sources,
       editor: UnprivilegedEditor,
     ): void,
+    onEditorContextMenu? : any,
     onKeyDown?: React.EventHandler<any>,
     onKeyPress?: React.EventHandler<any>,
     onKeyUp?: React.EventHandler<any>,
@@ -482,6 +483,7 @@ class ReactQuill extends React.Component<ReactQuillProps, ReactQuillState> {
         onKeyPress={this.props.onKeyPress}
         onKeyDown={this.props.onKeyDown}
         onKeyUp={this.props.onKeyUp}
+        onContextMenu={onEditorContextMenu}
       >
         {this.renderEditingArea()}
       </div>
